@@ -3,6 +3,14 @@ package palabra_larga;
 import java.util.Scanner;
 
 public class funciones1 {
+
+    /**
+     * Genera un array de 10 letras formado por 4 vocales, 4 consonantes 
+     * y 2 letras que pueden ser vocales o consonantes. Despues mezcla 
+     * las letras para que no aparezcan siempre en el mismo orden
+     * 
+     * @return devuelve un array con las 10 letras generadas
+     */
     public static char[] crearLetras(){
 
         char letras [] = new char[10];
@@ -40,6 +48,11 @@ public class funciones1 {
 
 
 
+    /**
+     * Muestra por pantalla las letras que pueden utilizar los jugadores
+     * 
+     * @param letras es un array que contiene las letras disponibles para jugar
+     */
     public static void enseniarLetras (char letras[]){
 
         System.out.println("Se pueden usar las siguientes letras: ");
@@ -51,6 +64,12 @@ public class funciones1 {
 
 
 
+    /**
+     * Permite al jugador introducir la palabra que quiere utilizar
+     * @param sc se usa para leer la palabra introducida
+     * @param jugador es el numero del jugador que tiene que insertar la palabra
+     * @return devuelve la palabra introducida por el jugador
+     */
     public static String ponerPalabra (Scanner sc, int jugador){
         System.out.println("El jugador " + jugador + "tiene que poner su palabra");
 
@@ -61,6 +80,13 @@ public class funciones1 {
 
 
 
+    /**
+     * Comprueba que la palabra se pueda formar utilizando las letras disponibles
+     * y que no se utilice ninguna letra mas veces de la cuenta
+     * @param palabra palabra introducida por el jugador
+     * @param letras array con las letras disponibles
+     * @return devuelve true si la palabra se puede formar y false si no se puede
+     */
     public static boolean comprobarLetras(String palabra, char letras[]){
 
         String usables = new String (letras);
@@ -83,6 +109,13 @@ public class funciones1 {
 
 
 
+    /**
+     * Pide al jugador que confirme si la palabra del otro jugador es valida o no
+     * @param sc para leer la respuesta del jugador
+     * @param palabra es la palabra que se quiere comprobar
+     * @param jugador es el numero del jugador que tiene que hacer la comprobacion
+     * @return devuelve si la respuesta es "si" o "no"
+     */
     public static boolean comprobacionDos(Scanner sc, String palabra, int jugador){
 
         String respuesta;
@@ -98,6 +131,14 @@ public class funciones1 {
 
 
 
+    /**
+     * Compara las palabras de los dos jugadores y determina quien ha ganado
+     * segun la validez y la longitud de las palabras
+     * @param palabra1 palabra introducida por el primer jugador
+     * @param valida1 indica si la palabra del primer jugador es valida
+     * @param palabra2 palabra introducida por el segundo jugador
+     * @param valida2 indica si la palabra del segundo jugador es valida
+     */
     public static void ganador(String palabra1, boolean valida1, String palabra2, boolean valida2){
         System.out.println("RESULTADO: ");
 
