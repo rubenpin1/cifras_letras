@@ -90,7 +90,7 @@ public class funciones {
             System.out.println("Introduzca el tipo de operacion entre (+,-,*,/): ");
             char tipoOp = sc.next().charAt(0);
 
-            System.out.println("Introduzca el segundo numero: ");
+            System.out.println("Introduzca el siguiente numero: ");
             int num2 = sc.nextInt();
 
             num1 = operacion(num1, num2, tipoOp);
