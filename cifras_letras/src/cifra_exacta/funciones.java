@@ -4,6 +4,11 @@ import java.util.Scanner;
 
 public class funciones {
     
+
+    /**
+     * Genera un numero aleatorio entre 100 y 999 que será utilizado como objetivo
+     * @return devuelve el numero objetivo generado aleatoriamente
+     */
     public static int crearObjetivo(){
 
         int objetivo = (int)(Math.random()*900) + 100;
@@ -13,6 +18,10 @@ public class funciones {
 
 
 
+    /**
+     * Genera un array de 6 numeros aleatorios entre 1 y 10
+     * @return devuelve el array con los 6 números generados
+     */
     public static int [] numerosAuxi(){
 
         int numeros [] = new int[6];
@@ -27,6 +36,13 @@ public class funciones {
 
 
 
+    /**
+     * Realiza una operacion matematica entre dos numeros segun el tipo de operacion indicada
+     * @param num1 primer numero de la operacion
+     * @param num2 segundo numero de la operacion
+     * @param tipoOp indica el tipo de operacion deseada
+     * @return devuelve el resultado de la operacion
+     */
     public static int operacion(int num1, int num2, char tipoOp){  //Es una funcion de logica porque solo calcula
 
         int resultado = 0;
@@ -57,6 +73,11 @@ public class funciones {
 
 
 
+    /**
+     * Permite al jugador introducir un numero inicial y realizar 5 operaciones consecutivas
+     * @param sc usamos el scanner para leer los datos introducidos
+     * @return devuelve el resultado final tras realizar las 5 operaciones
+     */
     public static int resultadoCifraExacta(Scanner sc){  //Esta funcion la usamos tanto para el primerJugador como para el segundo
 
         System.out.println("Introduzca el primer numero: ");
@@ -80,6 +101,12 @@ public class funciones {
 
 
 
+    /**
+     * Calcula la diferencia entre el resultado obtenido y el objetivo y la convierte en positiva
+     * @param resultado es el resultado obtenido del jugador
+     * @param objetivo es el numero objetivo que se quiere alcanzar
+     * @return devuelve la diferencia positiva entre el resultado y el objetivo
+     */
     public static int diferencia (int resultado, int objetivo){  //solo es para poner la diferencia en positivo
 
         int diferencia = resultado - objetivo;
@@ -92,6 +119,11 @@ public class funciones {
 
 
 
+    /**
+     * Compara las diferencias de los dos jugadores para determinar quien gana
+     * @param diferencia1 es la diferencia del primer jugador respecto al objetivo
+     * @param diferencia2 es la diferencia del segundo jugador respecto al objetivo
+     */
     public static void ganador(int diferencia1, int diferencia2){  //comparamos las diferencias para dar el ganador
 
         if (diferencia1 < diferencia2) {
